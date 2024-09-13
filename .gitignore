@@ -15,7 +15,5 @@ stderr/
 try.py
 plot*.py
 *.out
-*.png
-*.jpg
 *.wav
 *.ipynb
