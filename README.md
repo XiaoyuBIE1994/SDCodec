@@ -4,10 +4,9 @@
 
 [Xiaoyu Bie](https://xiaoyubie1994.github.io/), [Xubo Liu](https://liuxubo717.github.io/), [Gaël Richard](https://www.telecom-paris.fr/gael-richard?l=en)
 
-[`arXiv`](), [`Project`](https://xiaoyubie1994.github.io/sdcodec/)
+**[[arXiv]()]**, **[[Project](https://xiaoyubie1994.github.io/sdcodec/)]**
 
-
-<!-- <p align="center"> <img src='', align="center"> </p> -->
+<p align="center"> <img src='assets/pipeline.png', align="center"> </p>
 
 ## Enviroment Setup
 All our experiments are done on 8 A-100 80G GPU
