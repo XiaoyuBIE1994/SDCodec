@@ -65,13 +65,15 @@ for sr in args.data_sr:
 
 # import lib
 model_name = cfg.model.pop('name')
-if (ret_dir / 'backup_src').is_dir():
-    module_path = str(ret_dir / 'backup_src' / 'models').replace('/', '.')
+module_path = str(ret_dir / 'backup_src' / 'models').replace('/', '.')
+try:
     load_model = importlib.import_module(module_path)
     net_class = getattr(load_model, f'{model_name}')
-else:
+    print('Load model from ckpt')
+except:
     from src import models
     net_class = getattr(models, f'{model_name}')
+    print('Load model from source code')
 
 # load model and weigth
 model_cfg = cfg.model
