@@ -1,0 +1,66 @@
+total_steps: &total 400000
+warmup_steps: &warm 10000
+print_steps: 500
+eval_steps: 5000
+vis_steps: 10000
+test_steps: 30000
+
+
+early_stop: 50 # count for each eval
+grad_clip: 10.0 # no clip if < 0
+save_iters: [50000, 100000, 150000, 200000, 250000, 300000, 350000]
+vis_idx: [100, 200, 300]
+
+seed: 42
+
+# data transformation and augmentation
+transform:
+  lufs_norm_db:
+    speech: -17
+    music: -24
+    sfx: -21
+    mix: -27
+    var: 2
+  peak_norm_db: -0.5
+  random_num_sources: [0.6, 0.2, 0.2]
+  random_swap_prob: 0.5
+
+# Optimizer
+optimizer:
+  name: AdamW
+  lr: 1e-4
+  betas: [0.8, 0.99]
+  # weight_decay: 1e-5
+
+# Scheduler
+scheduler:
+  name: ExponentialLRScheduler
+  total_steps: *total
+  warmup_steps: *warm
+  lr_min_ratio: 0.0
+  gamma: 0.999996
+
+# Loss
+loss:
+  MultiScaleSTFTLoss:
+    window_lengths: [2048, 512]
+  MelSpectrogramLoss:
+    n_mels: [5, 10, 20, 40, 80, 160, 320]
+    window_lengths: [32, 64, 128, 256, 512, 1024, 2048]
+    mel_fmin: [0, 0, 0, 0, 0, 0, 0]
+    mel_fmax: [null, null, null, null, null, null, null]
+    pow: 1.0
+    clamp_eps: 1.0e-5
+    mag_weight: 0.0
+  lambdas:
+    mel/loss: 15.0
+    adv/feat_loss: 2.0
+    adv/gen_loss: 1.0
+    vq/commitment_loss: 0.25
+    vq/codebook_loss: 1.0
+
+# Dataloader config
+dataloader:
+  num_workers: 8
+  train_bs: 8
+  eval_bs: 32

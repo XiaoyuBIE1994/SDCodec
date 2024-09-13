@@ -1,0 +1,27 @@
+# Basic
+name: SDCodec
+latent_dim: 1024
+tracks: ['speech', 'music', 'sfx']
+enc_params:
+  name: DACEncoder
+  d_model: 64
+  strides: [2, 4, 5, 8]
+dec_params: 
+  name: DACDecoder
+  d_model: 1536
+  strides: [8, 5, 4, 2]
+quant_params:
+  name: MultiSourceRVQ
+  n_codebooks: [12, 12, 12]
+  codebook_size: [1024, 1024, 1024]
+  codebook_dim: [8, 8, 8]
+  quantizer_dropout: 0.0
+  code_jit_prob: [0.0, 0.0, 0.0]
+  code_jit_size: [3, 5, 3]
+  shared_codebooks: 1
+pretrain:
+  load_pretrained: './pretrained/weights_16khz_8kbps_0.0.5_new.pth'
+  ignore_args: ['n_codebooks', 'codebook_size', 'codebook_dim']
+  ignore_modules: []
+  freeze_modules: []
+

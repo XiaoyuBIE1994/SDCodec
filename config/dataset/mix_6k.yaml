@@ -1,0 +1,32 @@
+# Dataset config
+trainset_cfg:
+  speech:
+    - manifest/speech_dns5_emotional_speech.csv
+    - manifest/speech_dns5_french_speech.csv
+    - manifest/speech_dns5_german_speech.csv
+    - manifest/speech_dns5_italian_speech.csv
+    - manifest/speech_dns5_read_speech.csv
+    - manifest/speech_dns5_russian_speech.csv
+    - manifest/speech_dns5_spanish_speech.csv
+    - manifest/speech_dns5_vctk_wav48_silence_trimmed.csv
+    - manifest/speech_dns5_VocalSet_48kHz_mono.csv
+    - manifest/speech_musan.csv
+  music:
+    - manifest/music_jamendo.csv
+    - manifest/music_musan.csv
+  sfx:
+    - manifest/sfx_dns5.csv
+    - manifest/sfx_musan.csv
+    - manifest/sfx_wham.csv
+  n_examples: 10000000
+  chunk_size: 2.0
+  trim_silence: False
+  
+
+valset_cfg:
+  tsv_filepath: manifest/val_dnr.csv
+  chunk_size: 5.0
+
+testset_cfg:
+  tsv_filepath: manifest/test_dnr.csv
+  chunk_size: 10.0

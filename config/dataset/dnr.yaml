@@ -1,0 +1,21 @@
+# Dataset config
+trainset_cfg:
+  speech:
+    - manifest/speech_dnr.csv
+  music:
+    - manifest/music_dnr.csv
+  sfx:
+    - manifest/sfx_dnr.csv
+  n_examples: 10000000
+  chunk_size: 2.0
+  trim_silence: False
+  
+
+valset_cfg:
+  tsv_filepath: manifest/val.csv
+  chunk_size: 5.0
+
+testset_cfg:
+  tsv_filepath: manifest/test.csv
+  chunk_size: 10.0
+

@@ -1,0 +1,21 @@
+## VsCode
+.vscode/
+
+## Python output
+**/*.pyc
+
+## outputs
+manifest/
+pretrained/
+output/
+local_scripts/
+stdout/
+stderr/
+*.sh
+try.py
+plot*.py
+*.out
+*.png
+*.jpg
+*.wav
+*.ipynb

@@ -1,0 +1,30 @@
+# @package _global_
+hydra:
+  job:
+    config:
+      override_dirname:
+        kv_sep: ':'
+        item_sep: '/'
+        exclude_keys:
+          - run_config
+          - distributed_training.distributed_port
+          - distributed_training.distributed_world_size
+          - model.pretrained_model_path
+          - model.target_network_path
+          - next_script
+          - task.cache_in_scratch
+          - task.data
+          - checkpoint.save_interval_updates
+          - checkpoint.keep_interval_updates
+          - checkpoint.save_on_overflow
+          - common.log_interval
+          - common.user_dir
+  run:
+    dir: output/debug # job's output dir
+    # dir: output/${hydra.job.config_name}/${hydra.job.override_dirname} # job's output dir
+    # dir: /checkpoint/${env:USER}/${env:PREFIX}/${hydra.job.config_name}_${hydra.launcher.gpus_per_node}/${hydra.job.override_dirname}
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+        datefmt: '%Y-%m-%d %H:%M:%S'

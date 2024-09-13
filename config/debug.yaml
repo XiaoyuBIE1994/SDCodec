@@ -1,0 +1,11 @@
+defaults:
+    - model: sdcodec_16k
+    - discriminator: default
+    - dataset: dnr
+    - training: bs2_iter5k
+    - _self_
+
+sampling_rate: 16000
+resume: True
+resume_dir: null
+backup_code: True
