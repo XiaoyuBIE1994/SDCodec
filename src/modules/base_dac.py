@@ -60,7 +60,7 @@ class DecoderBlock(nn.Module):
                 output_dim,
                 kernel_size=2 * stride,
                 stride=stride,
-                padding=math.floor(stride / 2),
+                padding=math.floor(stride / 2), # ceil() -> floor(), for 16kHz
             ),
             ResidualUnit(output_dim, dilation=1),
             ResidualUnit(output_dim, dilation=3),

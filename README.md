@@ -4,12 +4,12 @@
 
 [Xiaoyu Bie](https://xiaoyubie1994.github.io/), [Xubo Liu](https://liuxubo717.github.io/), [Gaël Richard](https://www.telecom-paris.fr/gael-richard?l=en)
 
-**[[arXiv]()]**, **[[Project](https://xiaoyubie1994.github.io/sdcodec/)]**
+**[[arXiv](https://arxiv.org/abs/2409.11228)]**, **[[Project](https://xiaoyubie1994.github.io/sdcodec/)]**
 
 <p align="center"> <img src='assets/pipeline.png', align="center"> </p>
 
 ## Enviroment Setup
-All our experiments are done on 8 A-100 80G GPU
+All our models are trained on 8 A-100 80G GPUs
 
 ```
 conda env create -f environment.yml
@@ -68,11 +68,16 @@ nohup python eval_dnr.py --ret-dir ${model_dir} --csv-path ./manifest/test.csv -
 ## Citation
 If you find this project usefule in your resarch, please consider cite:
 ```BibTeX
-
+@article{bie2024sdcodec,
+  author={Bie, Xiaoyu and Liu, Xubo and Richard, Ga{\"e}l},
+  title={Learning Source Disentanglement in Neural Audio Codec},
+  journal={arXiv preprint arXiv:2409.11228},
+  year={2024},
+}
 ```
 
 
 ## Acknowledgments
 Some of the code in this project is inspired or modifed from the following projects:
 - [AudioCraft](https://github.com/facebookresearch/audiocraft)
-- [DAC](https://github.com/descriptinc/descript-audio-codec/tree/main)
+- [DAC](https://github.com/descriptinc/descript-audio-codec)
