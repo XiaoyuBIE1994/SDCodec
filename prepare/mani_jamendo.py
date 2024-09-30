@@ -20,7 +20,7 @@ parser.add_argument('--data-dir', type=str, default='/home/xbie/Data/mtg-jamendo
 parser.add_argument('--partition', type=int, default=-1, help='Audio partition to create manifest')
 parser.add_argument('--out-dir', type=str, default='./manifest', help='Path to write manifest')
 parser.add_argument('--threshold', type=float, default=0.5, help='Remove audio files that are too short')
-parser.add_argument('--ext', type=str, default='mp3', choices=['wav', 'mp3', 'wav'], help='Audio format')
+parser.add_argument('--ext', type=str, default='mp3', choices=['wav', 'mp3', 'flac'], help='Audio format')
 
 args = parser.parse_args()
 data_dir = Path(args.data_dir)

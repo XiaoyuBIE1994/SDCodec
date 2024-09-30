@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser(description='Generate manifest for audio datase
 
 parser.add_argument('--data-dir', type=str, default='/home/xbie/Data/dnr_v2', help='Audio Dataset Path')
 parser.add_argument('--out-dir', type=str, default='./manifest', help='Path to write manifest')
-parser.add_argument('--ext', type=str, default='wav', choices=['wav', 'mp3', 'wav'], help='Audio format')
+parser.add_argument('--ext', type=str, default='wav', choices=['wav', 'mp3', 'flac'], help='Audio format')
 
 args = parser.parse_args()
 data_dir = Path(args.data_dir)
