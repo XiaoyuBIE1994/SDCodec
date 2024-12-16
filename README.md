@@ -19,7 +19,7 @@ conda activate gen_audio
 The code was tested on Python 3.11.7 and PyTorch 2.1.2
 
 To install [VisQol](https://github.com/google/visqol), the simples way is to use [Bazelisk](https://github.com/bazelbuild/bazelisk?tab=readme-ov-file), especially if you want to install it on the cluster where you do not have the `sudo` right. 
-Here is an [example]()
+Here is an [example](https://github.com/XiaoyuBIE1994/SDCodec/blob/main/install_visqol.md)
 ```
 
 ## Dataset Preparation
