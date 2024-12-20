@@ -1,12 +1,14 @@
 # SD-Codec
 
-**Learning Source Disentanglement in Neural Audio Codec**
+**Learning Source Disentanglement in Neural Audio Codec, ICASSP 2025**
 
 [Xiaoyu Bie](https://xiaoyubie1994.github.io/), [Xubo Liu](https://liuxubo717.github.io/), [Gaël Richard](https://www.telecom-paris.fr/gael-richard?l=en)
 
 **[[arXiv](https://arxiv.org/abs/2409.11228)]**, **[[Project](https://xiaoyubie1994.github.io/sdcodec/)]**
 
 <p align="center"> <img src='assets/pipeline.png', align="center"> </p>
+
+The pretrained models can be downloaded via [Google Drive](https://drive.google.com/drive/folders/1-OjiNmtFdTUGwQF17FDMjzZgoBJJkHpG?usp=drive_link)
 
 ## Enviroment Setup
 All our models are trained on 8 A-100 80G GPUs
@@ -72,11 +74,11 @@ nohup python eval_dnr.py --ret-dir ${model_dir} --csv-path ./manifest/test.csv -
 ## Citation
 If you find this project usefule in your resarch, please consider cite:
 ```BibTeX
-@article{bie2024sdcodec,
+@inproceedings{bie2025sdcodec,
   author={Bie, Xiaoyu and Liu, Xubo and Richard, Ga{\"e}l},
   title={Learning Source Disentanglement in Neural Audio Codec},
-  journal={arXiv preprint arXiv:2409.11228},
-  year={2024},
+  booktitle={IEEE International Conference on Acoustic, Speech and Signal Procssing (ICASSP)},
+  year={2025},
 }
 ```
 
