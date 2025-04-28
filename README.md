@@ -36,20 +36,20 @@ We use the following dataset:
 mkdir manifest
 
 # DnR
-pyhthon prepare/mani_dnr.py --data-dir PARH_TO_DnR
+pyhthon prepare/mani_dnr.py --data-dir PATH_TO_DnR
 
 # DNS Challenge 5
-pyhthon prepare/mani_dns_clean.py --data-dir PARH_TO_DNS_CLEAN # or by partition
-pyhthon prepare/mani_dns_noise.py --data-dir PARH_TO_DNS_NOISE
+pyhthon prepare/mani_dns_clean.py --data-dir PATH_TO_DNS_CLEAN # or by partition
+pyhthon prepare/mani_dns_noise.py --data-dir PATH_TO_DNS_NOISE
 
 # Jamedo
-pyhthon prepare/mani_jamendo.py --data-dir PARH_TO_JAMENDO # or by partition
+pyhthon prepare/mani_jamendo.py --data-dir PATH_TO_JAMENDO # or by partition
 
 # MUSAN
-pyhthon prepare/mani_musan.py --data-dir PARH_TO_MUSAN
+pyhthon prepare/mani_musan.py --data-dir PATH_TO_MUSAN
 
 # WHAM
-pyhthon prepare/mani_wham.py --data-dir PARH_TO_WHAM
+pyhthon prepare/mani_wham.py --data-dir PATH_TO_WHAM
 ```
 
 ## Training
